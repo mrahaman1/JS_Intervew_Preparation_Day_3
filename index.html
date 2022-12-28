@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Preparation Day-3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Interview Preparation(Day-3)</h1>
+    <div class="container">
+        <div>
+            <h3>1.How many operators do we have in JS ?</h3>
+            <p>In JS we have 6 types of operators.They are:<br>1.Assignment Operators(+,-,*,/,%)<br>2.Comparsion Operators(==,===,!=,!==)<br>3.Logical operators(&&,||,^,!)<br>4.Assignment operators(=,+=,-=,*=,/=,%=)<br>5.Conditional Operators<br>6.Ternary Operators(?:;)
+            </p>
+        </div>
+        <div>
+            <h3>2.What are arrow functions?</h3>
+            <p>Arrow funstions are introduced in Es6.In Js arrow functions are called as fat arrow functions.these are a new way of writing compare to normal functions.Arrow functions are stored in a variable and it allows us to use fat arrow => operator. we can omit curly braces and function and return key words in arrow functions.</p>
+            <pre>
+                let x = function(x,y){
+                    return x*y;
+                }
+
+                let x = (x,y) => x*y;
+            </pre>
+        </div>
+        <div>
+            <h3>3.Difference between undefined vs not defined vs NaN</h3>
+            <p>undefined: A variable is declared but not assigned with a value then it is called undefined.<br>NaN: NaN represents not a number.If we perform any mathematical operation on undefined then we get NaN.
+            </p>
+            <pre>
+                let x;
+                console.log(x/2);
+                b();
+            </pre>
+        </div>
+        <div>
+            <h3>4.What is callback hell</h3>
+            <p>callback hell is a pattern with multiple nested call backs which makes code hard to read and debug the code when we are dealing with asynchrous logic.The callback hell looks like a pyramid structure.</p>
+            <pre>
+                setTimeout(()=>{
+                    console.log("hi")
+                    setTimeout(()=>{
+                        console.log("Hello")
+                        setTimeout(()=>{
+                            console.log("Wellcome")
+                        },3000)
+                    },2000)
+                },1000)
+            </pre>
+        </div>
+        <div>
+            <h3>5.Please explain Self Invoking Function and its code</h3>
+            <p>Self Ivoking Function is also called as IIFE. IIFE(Immediatly Invoked function expression) is a javascript function that runs as soon as it is defined and it is an anonymous function.The signature of it given below:
+            The primary reason to use IIFE is to obtain data privacy because any variables declared with in IIFE cannot be accessed by the outside world.If u try to access them it throws error.
+            </p>
+            <pre>
+                (function(){
+                    var greet="Good Morning"
+                    console.log(greet);
+                })();
+                console.log(greet);
+            </pre>
+        </div>
+        <div>
+            <h3>6.What is the use of setTimeout</h3>
+            <p>
+                setTimeout() is a method inside the window object,it calls the specified function or evaluates a JS experssin after a given timeperiod for only once.We use this method to delay some kind of executions.Ex:alarms,remainders.
+            </p>
+            <pre>
+                setTimeout(()=>{
+                    console.log("Hello");
+                },3000)
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
